@@ -1,11 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* Google Fonts as fallback */
-// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+// Override Bootstrap shadow variables before importing Bootstrap
 
 @import './scss/fonts';
 @import './scss/typography';
 @import './scss/custom-typography';
+@import './scss/variable';
 @import 'bootstrap/scss/bootstrap';
 @import './scss/utilities';
 
