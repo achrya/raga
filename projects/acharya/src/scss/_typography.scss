@@ -1,0 +1,35 @@
+// Base font families
+$font-family-sans-serif: "InterVar", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial !default;
+$font-family-monospace: "JetBrainsMono", ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace !default;
+$display-font-family: "Playfair Display", Georgia, "Times New Roman", serif !default;
+
+// Headings
+$headings-font-family: $display-font-family !default; // Playfair for headings
+$headings-font-weight: 600 !default;
+$headings-line-height: 1.2 !default;
+
+// Body
+$font-size-root: 16px !default;
+$font-size-base: 1rem !default;        // 16px
+$font-weight-base: 400 !default;
+$line-height-base: 1.6 !default;
+$body-color: #0b1220 !default;
+
+// Small / lead
+$small-font-size: 0.875rem !default;   // 14px
+$lead-font-size: 1.125rem !default;    // 18px
+$lead-font-weight: 400 !default;
+
+// Headings scale
+$h1-font-size: 2.25rem !default;       // 36px base
+$h2-font-size: 1.875rem !default;      // 30px
+$h3-font-size: 1.5rem !default;        // 24px
+$h4-font-size: 1.25rem !default;       // 20px
+$h5-font-size: 1rem !default;          // 16px
+$h6-font-size: 0.875rem !default;      // 14px
+
+// Fluid scaling (RFS)
+$enable-rfs: true !default;
+$h1-font-size-rfs: true !default;
+$h2-font-size-rfs: true !default;
+$h3-font-size-rfs: true !default;

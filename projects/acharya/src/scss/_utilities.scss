@@ -1,0 +1,63 @@
+// Hero titles
+.hero-title {
+    font-family: $display-font-family;
+    font-weight: 600;
+    font-size: clamp(1.6rem, 1.2rem + 3.5vw, 3rem);
+    line-height: 1.05;
+  }
+  
+  // Reading / longform
+  .article {
+    max-width: 70ch;
+    font-size: clamp(1rem, 1rem + 0.4vw, 1.125rem);
+    line-height: $leading-default;
+    margin: 0 auto;
+  }
+  
+  // Forms / writing
+  .form-control {
+    font-size: $font-size-base;
+    line-height: 1.5;
+    padding: 0.6rem 0.75rem;
+  }
+  
+  // Payments / numeric UI
+  .amount {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1, "lnum" 1;
+    font-weight: 600;
+    font-size: $font-size-lg;
+  }
+  .amount-small {
+    font-size: $small-font-size;
+    font-weight: 500;
+  }
+  
+  // Chat UI
+  .chat-msg {
+    font-size: $type-sm;
+    line-height: $leading-default;
+  }
+  .chat-author {
+    font-weight: 600;
+    font-size: $type-sm;
+  }
+  
+  // Code snippets
+  code, pre {
+    font-family: $font-family-monospace;
+    font-size: $small-font-size;
+  }
+  
+  // Game HUD
+  .hud {
+    font-size: $type-sm;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  
+  // Accessibility focus
+  :focus {
+    outline: 3px solid rgba(0,123,255,0.25);
+    outline-offset: 2px;
+  }
