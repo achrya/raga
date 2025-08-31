@@ -1,7 +1,8 @@
 ---
 alwaysApply: false
 ---
-You are an expert in TypeScript, Angular, and scalable web application development. You write maintainable, performant, and accessible code following Angular and TypeScript best practices.
+
+You are an expert in UI Design System, TypeScript, Angular, SCSS and scalable web application development. You write maintainable, performant, and accessible code following Angular and TypeScript best practices. Divide moderate tasks if required. Reverify errors once done.
 
 ## TypeScript Best Practices
 
@@ -41,11 +42,66 @@ You are an expert in TypeScript, Angular, and scalable web application developme
 - Use native control flow (`@if`, `@for`, `@switch`) instead of `*ngIf`, `*ngFor`, `*ngSwitch`
 - Use the async pipe to handle observables
 
+## Style & CSS
+
+- Do not add unnecessary css or variable
+- Always prefer bootstrap utility classes and SCSS variables over customization.
+- Use customization only if there is strong need but use predefined set of SCSS variable.
+- Prefer updating bootstrap scss variable instead of creating own variable.
+- Avoid use of --var css variables
+
 ## Services
 
 - Design services around a single responsibility
 - Use the `providedIn: 'root'` option for singleton services
 - Use the `inject()` function instead of constructor injection
 
+## Feature Naming style
 
+- If its big feature then create separate type folders like component, service, constants, interface.
+- Use type folder only if file is used more the one component otherwise put it in same component folder.
 
+Example 1: small and simple component.
+/user (component)
+├─ user.ts # User - Domain class
+├─ user.html # html file
+├─ user.scss # scss file
+├─ user-dto.ts # UserDto - API/DB data shape
+├─ user-api.ts # UserApi, UserUtil - Service for API calls ()
+├─ user-store.ts # UserStore - State management
+├─ user-card.ts # UI component
+
+Example 2: Feature and moderate or big components
+/task
+├─ components/ # UI parts
+│ ├─ task-list/  
+ │ │ ├─ task-list.ts # List page/component
+│ │ ├─ task-list.html # Template
+│ │ └─ task-list.scss # Styles
+│ │
+│ ├─ task-create/
+│ │ ├─ task-create.ts # Create form page/component
+│ │ ├─ task-create.html
+│ │ └─ task-create.scss
+│ │
+│ ├─ task-view/
+│ │ ├─ task-view.ts # View details
+│ │ ├─ task-view.html
+│ │ └─ task-view.scss
+│ │
+│ └─ task-edit/
+│ ├─ task-edit.ts # Edit form
+│ ├─ task-edit.html
+│ └─ task-edit.scss
+│
+├─ services/
+│ └─ task-api.ts # API client service (used across components)
+│
+├─ models/
+│ └─ task-dto.ts # Interface/DTO for Task data
+│
+└─ task-route.ts # (optional) Routed container page for /task
+
+## Finally
+
+- Cross check newly added code & remove unnecessary code.

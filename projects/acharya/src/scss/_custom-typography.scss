@@ -1,10 +1,12 @@
-$type-xs: 0.75rem;   // captions
-$type-sm: 0.875rem;  // metadata
-$type-md: 1rem;      // body
-$type-lg: 1.125rem;  // lead
-$type-xl: 1.5rem;    // h4/h3
-$type-xxl: 2.25rem;  // h1/hero
+// Custom type scale - using !default for Bootstrap compatibility
+$type-xs: 0.75rem !default;   // captions
+$type-sm: 0.875rem !default;  // metadata
+$type-md: 1rem !default;      // body
+$type-lg: 1.125rem !default;  // lead
+$type-xl: 1.5rem !default;    // h4/h3
+$type-xxl: 2.25rem !default;  // h1/hero
 
-$leading-tight: 1.15;
-$leading-default: 1.6;
-$leading-loose: 1.75;
+// Line heights - using !default for Bootstrap compatibility
+$leading-tight: 1.15 !default;
+$leading-default: 1.6 !default;
+$leading-loose: 1.75 !default;

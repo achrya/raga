@@ -1,182 +1,85 @@
-<header class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold fs-3" href="#">BrandName</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="#solutions">Solutions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#pricing">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#resources">Resources</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-        <button class="btn btn-primary">Get Started</button>
-      </div>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-3" routerLink="/">
+      <i class="bi bi-mortarboard me-2"></i>
+      {{ title() }}
+    </a>
+    
+    <button 
+      class="navbar-toggler" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" 
+      aria-expanded="false" 
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" 
+             routerLink="/home" 
+             routerLinkActive="active" 
+             [routerLinkActiveOptions]="{exact: true}">
+            <i class="bi bi-house me-1"></i>
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" 
+             routerLink="/students" 
+             routerLinkActive="active">
+            <i class="bi bi-people me-1"></i>
+            Students
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" 
+             routerLink="/students/register" 
+             routerLinkActive="active">
+            <i class="bi bi-plus-circle me-1"></i>
+            Register Student
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#solutions">
+            Solutions
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#pricing">
+            Pricing
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#resources">
+            Resources
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">
+            Contact
+          </a>
+        </li>
+      </ul>
+      <button class="btn btn-primary">Get Started</button>
     </div>
-  </header>
+  </div>
+</nav>
 
-  <!-- Hero Section -->
-  <section class="text-center py-5 bg-primary bg-opacity-10">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <h1 class="display-4 fw-bold mb-4">Empowering Learning for Everyone</h1>
-          <p class="lead text-muted mb-4">An interactive, multilingual learning platform that helps students self-learn, practice, and track their progress with ease.</p>
-          <button class="btn btn-primary btn-lg px-4 py-3">Start Free Trial</button>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- Main Content -->
+<main>
+  <router-outlet></router-outlet>
+</main>
 
-  <!-- Social Proof -->
-  <section class="py-5 text-center">
-    <div class="container">
-      <p class="text-muted mb-4">Trusted by leading institutions and companies</p>
-      <div class="row justify-content-center">
-        <div class="col-md-4 col-sm-6 mb-3">
-          <span class="fw-bold fs-5">Company A</span>
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <span class="fw-bold fs-5">Company B</span>
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <span class="fw-bold fs-5">Company C</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Value Propositions -->
-  <section id="solutions" class="py-5 bg-white">
-    <div class="container">
-      <h2 class="text-center fw-bold mb-5">Why Choose Us?</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100 border-0 shadow">
-            <div class="card-body text-center p-4">
-              <i class="fas fa-clock fa-3x text-primary mb-3"></i>
-              <h3 class="card-title h5 fw-semibold mb-3">Self-Paced Learning</h3>
-              <p class="card-text text-muted">Students can choose subjects and lessons, and learn at their own pace.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 border-0 shadow">
-            <div class="card-body text-center p-4">
-              <i class="fas fa-language fa-3x text-primary mb-3"></i>
-              <h3 class="card-title h5 fw-semibold mb-3">Multilingual Support</h3>
-              <p class="card-text text-muted">Access lessons in your preferred language for better understanding.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 border-0 shadow">
-            <div class="card-body text-center p-4">
-              <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
-              <h3 class="card-title h5 fw-semibold mb-3">Progress Tracking</h3>
-              <p class="card-text text-muted">Track learning milestones, scores, and achievements seamlessly.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Demo Showcase -->
-  <section class="py-5 bg-light text-center">
-    <div class="container">
-      <h2 class="fw-bold mb-4">See It in Action</h2>
-      <p class="text-muted mb-5">Experience our interactive modules and easy-to-use platform.</p>
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="card border-0 shadow-lg">
-            <img src="https://via.placeholder.com/800x400" alt="Demo Screenshot" class="card-img-top">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="py-5 bg-white">
-    <div class="container">
-      <h2 class="text-center fw-bold mb-5">What Our Users Say</h2>
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="card border-0 shadow-lg h-100">
-            <div class="card-body p-4">
-              <p class="card-text fst-italic text-muted mb-3">"This platform transformed how I learn. The multilingual support is a game changer!"</p>
-              <h4 class="card-title h6 fw-semibold mb-0">- Priya Sharma, Student</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card border-0 shadow-lg h-100">
-            <div class="card-body p-4">
-              <p class="card-text fst-italic text-muted mb-3">"Easy to track progress and stay motivated. Highly recommended for schools!"</p>
-              <h4 class="card-title h6 fw-semibold mb-0">- Rajesh Kumar, Teacher</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Call to Action -->
-  <section class="py-5 bg-primary text-white text-center">
-    <div class="container">
-      <h2 class="fw-bold mb-4">Ready to Start Your Learning Journey?</h2>
-      <p class="mb-4">Join thousands of students already using our platform.</p>
-      <button class="btn btn-light btn-lg px-4 py-3 text-primary fw-semibold">Get Started Now</button>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-5 bg-dark text-light">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-3">
-          <h4 class="text-white fw-semibold mb-3">Company</h4>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="#" class="text-light text-decoration-none">About</a></li>
-            <li class="mb-2"><a href="#" class="text-light text-decoration-none">Careers</a></li>
-            <li class="mb-2"><a href="#" class="text-light text-decoration-none">Press</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3">
-          <h4 class="text-white fw-semibold mb-3">Resources</h4>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="#" class="text-light text-decoration-none">Docs</a></li>
-            <li class="mb-2"><a href="#" class="text-light text-decoration-none">Blog</a></li>
-            <li class="mb-2"><a href="#" class="text-light text-decoration-none">API</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3">
-          <h4 class="text-white fw-semibold mb-3">Support</h4>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="#" class="text-light text-decoration-none">Help Center</a></li>
-            <li class="mb-2"><a href="#" class="text-light text-decoration-none">Contact</a></li>
-            <li class="mb-2"><a href="#" class="text-light text-decoration-none">Community</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3">
-          <h4 class="text-white fw-semibold mb-3">Stay Connected</h4>
-          <div class="input-group mb-3">
-            <input type="email" class="form-control" placeholder="Your email">
-            <button class="btn btn-primary" type="button">Subscribe</button>
-          </div>
-        </div>
-      </div>
-      <hr class="my-4">
-      <p class="text-center text-muted mb-0">© 2025 BrandName. All rights reserved.</p>
-    </div>
-  </footer>
+<!-- Footer -->
+<footer class="bg-light py-4 mt-5">
+  <div class="container text-center">
+    <p class="text-muted mb-0">
+      © 2024 Acharya Student Management System. All rights reserved.
+    </p>
+  </div>
+</footer>

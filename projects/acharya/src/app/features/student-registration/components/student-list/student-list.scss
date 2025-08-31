@@ -1,0 +1,147 @@
+// Import Bootstrap variables
+@import '../../../scss/variable';
+
+// Student list component styling
+// Most styling is handled by Bootstrap utility classes
+
+.student-card {
+  border-radius: $card-border-radius-lg;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $box-shadow-lg !important;
+  }
+  
+  .card-body {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  }
+}
+
+// Badge styling
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+}
+
+// Dropdown styling
+.dropdown-menu {
+  border-radius: $border-radius;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  
+  .dropdown-item {
+    padding: 0.75rem 1rem;
+    transition: all 0.2s ease-in-out;
+    
+    &:hover {
+      background-color: #f8f9fa;
+    }
+    
+    &.text-danger:hover {
+      background-color: #f8d7da;
+    }
+  }
+}
+
+// Search and filter section
+.card {
+  border-radius: $card-border-radius-lg;
+  
+  .card-body {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  }
+}
+
+// Form controls
+.form-control, .form-select {
+  border-radius: $input-border-radius;
+  border: $input-border-width solid #e9ecef;
+  transition: all 0.2s ease-in-out;
+  
+  &:focus {
+    border-color: $input-focus-border-color;
+    box-shadow: $input-focus-box-shadow;
+  }
+}
+
+// Button styling
+.btn {
+  border-radius: $btn-border-radius;
+  font-weight: $btn-font-weight;
+  transition: all 0.2s ease-in-out;
+  
+  &:hover {
+    transform: translateY(-1px);
+  }
+  
+  &.btn-outline-primary:hover {
+    transform: translateY(-1px);
+  }
+}
+
+// Loading spinner
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+// Alert styling
+.alert-danger {
+  border-radius: $border-radius-lg;
+  border: none;
+  background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+}
+
+// Empty state icons
+.bi {
+  &.display-1 {
+    font-size: 4rem;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .student-card {
+    margin-bottom: 1rem;
+  }
+  
+  .btn-lg {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .text-md-end {
+    text-align: center !important;
+  }
+}
+
+// Card footer
+.card-footer {
+  background: transparent;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  
+  .btn {
+    border-radius: $btn-border-radius;
+    font-weight: $btn-font-weight;
+  }
+}
+
+// Hover effects for interactive elements
+.btn-link:hover {
+  color: $primary !important;
+}
+
+// Focus states for accessibility
+.btn:focus,
+.form-control:focus,
+.form-select:focus {
+  outline: none;
+}
+
+// Smooth transitions
+* {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}

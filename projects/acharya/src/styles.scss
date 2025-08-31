@@ -1,16 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
 
 // Override Bootstrap shadow variables before importing Bootstrap
-
 @import './scss/fonts';
 @import './scss/typography';
 @import './scss/custom-typography';
 @import './scss/variable';
+
 @import 'bootstrap/scss/bootstrap';
+
 @import './scss/utilities';
 
+/* Custom global styles */
+body {
+  line-height: $line-height-base;
+  color: #333;
+}
+
+/* Custom utility classes */
+.text-gradient {
+  background: linear-gradient(135deg, $primary 0%, $info 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Smooth scrolling */
 html {
   font-size: clamp(1rem, 0.95rem + 0.6vw, 1.25rem);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -22,4 +39,52 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid $primary;
+  outline-offset: 2px;
+}
+
+/* Custom button hover effects */
+.btn {
+  transition: all 0.2s ease-in-out;
+  
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+/* Custom card hover effects */
+.card {
+  transition: all 0.3s ease-in-out;
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Custom form styling */
+.form-control:focus,
+.form-select:focus {
+  border-color: $input-focus-border-color;
+  box-shadow: $input-focus-box-shadow;
+}
+
+/* Loading states */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .display-5 {
+    font-size: 2.5rem;
+  }
+  
+  .lead {
+    font-size: 1.1rem;
+  }
 }

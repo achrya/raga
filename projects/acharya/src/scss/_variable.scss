@@ -1,1 +1,86 @@
+// Bootstrap SCSS variable overrides
+// Override Bootstrap variables before importing Bootstrap
+
+// Colors
+$primary: #0d6efd;
+$secondary: #6c757d;
+$success: #198754;
+$info: #0dcaf0;
+$warning: #ffc107;
+$danger: #dc3545;
+
+// Shadows
 $box-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+// Typography - Base font families
+$font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-family-monospace: 'JetBrainsMono', ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace;
+$display-font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+
+// Typography - Headings
+$headings-font-family: $display-font-family;
+$headings-font-weight: 600;
+$headings-line-height: 1.2;
+
+// Typography - Body
+$font-size-root: 16px;
+$font-size-base: 1rem;
+$font-size-lg: 1.125rem;
+$font-weight-base: 400;
+$line-height-base: 1.6;
+$body-color: #0b1220;
+
+// Typography - Small / lead
+$small-font-size: 0.875rem;
+$lead-font-size: 1.125rem;
+$lead-font-weight: 400;
+
+// Typography - Headings scale
+$h1-font-size: 2.25rem;
+$h2-font-size: 1.875rem;
+$h3-font-size: 1.5rem;
+$h4-font-size: 1.25rem;
+$h5-font-size: 1rem;
+$h6-font-size: 0.875rem;
+
+// Typography - Custom type scale
+$type-xs: 0.75rem;
+$type-sm: 0.875rem;
+$type-md: 1rem;
+$type-lg: 1.125rem;
+$type-xl: 1.5rem;
+$type-xxl: 2.25rem;
+
+// Typography - Line heights
+$leading-tight: 1.15;
+$leading-default: 1.6;
+$leading-loose: 1.75;
+
+// Border radius
+$border-radius: 0.5rem;
+$border-radius-lg: 1rem;
+$border-radius-sm: 0.25rem;
+$border-radius-md: 0.5rem;
+
+// Button
+$btn-border-radius: 0.5rem;
+$btn-font-weight: 600;
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 1.5rem;
+
+// Form
+$input-border-radius: 0.5rem;
+$input-border-width: 2px;
+$input-focus-border-color: $primary;
+$input-focus-box-shadow: 0 0 0 0.2rem rgba($primary, 0.25);
+
+// Card
+$card-border-radius: 1rem;
+$card-border-width: 0;
+$card-border-radius-lg: 1.5rem;
+
+// Fluid scaling (RFS)
+$enable-rfs: true;
+$h1-font-size-rfs: true;
+$h2-font-size-rfs: true;
+$h3-font-size-rfs: true;

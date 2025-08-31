@@ -1,0 +1,47 @@
+// Import Bootstrap variables
+@import '../../../scss/variable';
+
+// Home component styling
+// Most styling is handled by Bootstrap utility classes
+
+// Custom card hover effects
+.card {
+  transition: all 0.3s ease-in-out;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $box-shadow-lg !important;
+  }
+}
+
+// Hero section background
+.bg-primary.bg-opacity-10 {
+  background: linear-gradient(135deg, rgba($primary, 0.1) 0%, rgba($primary, 0.05) 100%) !important;
+}
+
+// Icon styling
+.fas {
+  &.fa-3x {
+    color: $primary;
+  }
+}
+
+// Button hover effects
+.btn {
+  transition: all 0.2s ease-in-out;
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  
+  .lead {
+    font-size: 1.1rem;
+  }
+}
