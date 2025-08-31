@@ -21,6 +21,7 @@
             "tsConfig": "projects/acharya/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "outputPath": "dist/acharya",
+            "baseHref": "/raga/",
             "assets": [
               {
                 "glob": "**/*",

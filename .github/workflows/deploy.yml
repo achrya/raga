@@ -31,7 +31,10 @@ jobs:
         run: npm ci
         
       - name: Build Angular app
-        run: npm run build --project=acharya --configuration=production
+        run: npm run build:prod
+        
+      - name: List build output
+        run: ls -la dist/acharya/browser/
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
