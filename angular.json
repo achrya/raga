@@ -20,6 +20,7 @@
             "browser": "projects/acharya/src/main.ts",
             "tsConfig": "projects/acharya/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "outputPath": "dist/acharya",
             "assets": [
               {
                 "glob": "**/*",
